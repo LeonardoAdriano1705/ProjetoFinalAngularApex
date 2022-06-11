@@ -1,0 +1,34 @@
+<h1>Lista de animais para Adoção</h1>
+
+<br>
+<hr>
+<br>
+
+<form (submit)="submitForm()">
+    <input type="text" placeholder="Nome" [(ngModel)]="name" name="name">
+    <input type="text" placeholder="Idade" [(ngModel)]="age" name="age">
+    <select [(ngModel)]="type" name="type">
+        <option value="dog">Cachorro</option>
+        <option value="cat">Gato</option>
+        <option value="fish">Peixe</option>
+    </select>
+    <input type="submit" value="Cadastrar / Atualizar">
+    <button (click)="limparCampos($event)">Limpar</button>
+
+
+</form>
+
+<br>
+
+<ul>
+    <li *ngFor="let animal of animals">
+        <button (click)="preencherCampos(animal)" style="margin-right: 10px;">Editar</button>
+        <button (click)="deletarAnimals(animal.id)">Excluir</button> -
+        Nome:<strong>{{animal.name}}</strong> -
+        Idade:<strong>{{animal.age}}</strong> -
+        Tipo: <strong>{{animal.type}}</strong> -
+
+    </li>
+
+
+</ul>

@@ -1,0 +1,42 @@
+form{
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+    display:flex;
+    width:100%;
+}
+input[type="text"],
+select{
+    width:200px;
+    height:40px;
+    border-radius:5px;
+    border:1px solid black;
+    padding:0 10px;
+}
+input[type="submit"],form > button,li button{
+    width:auto;
+    height:40px;
+    padding:0 10px;
+    border-radius:5px;
+    background-color:#DEC129;
+    border:1px solid #DEC129;
+    cursor:pointer;
+
+    transition:0.2s;
+
+}
+input[type="submit"]:hover,
+form > button:hover,li button:hover{
+    background-color:transparent;
+    color:#DEC129;
+}
+ul{
+    list-style:none;
+
+}
+li{
+    margin-bottom:10px;
+}
+
+
+
